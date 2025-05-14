@@ -1,0 +1,28 @@
+```mermaid
+flowchart TD
+    subgraph DAO_Program
+        A1[create_proposal]
+        A2[create_vote]
+        A3[close_proposal]
+        A3 -->|proposal passed| CPI[update_config via CPI]
+    end
+
+    subgraph NoteBox_Program
+        B1[initialize_config]
+        B2[create_post]
+        B3[update_post]
+        B4[delete_post]
+        B5[update_config]
+        B5 -->|updates| CONFIG[Config PDA]
+    end
+
+    CLIENT[Client Wallet] --> A1
+    CLIENT --> A2
+    CLIENT --> B2
+
+    CPI --> B5
+    CONFIG -. read .-> B2
+    CONFIG -. enforce .-> B3
+    CONFIG -. enforce .-> B4
+```
+
