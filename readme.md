@@ -44,9 +44,10 @@ anchor build
 anchor deploy --provider.cluster devnet
 anchor idl init -f target/idl/notebox.json <PROGRAM_ID>
 anchor idl init -f target/idl/dao_vote.json <PROGRAM_ID>
+anchor test --skip-deploy --provider.cluster "https://devnet.helius-rpc.com/?api-key=<your_helius_api_key>"
 ```
 
-## Deployed Program IDs (Devnet)
+### Deployed Program IDs (Devnet)
 
 - **NoteBox Program ID:** `2gkh4PKHmENrdnjNmb515KVbvpdWGsvbDtQ4qzC2FqrV`
 - **DAO_Vote Program ID:** `6f5HD6HfhDScH56N59mcGeDa44vCwdQF65JyZS668pJf`
@@ -85,5 +86,5 @@ cd capstone-dao-notebox
 anchor build && anchor test
 ```
 
-## License
+## 📄 License
 MIT

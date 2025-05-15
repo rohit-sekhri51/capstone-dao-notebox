@@ -5,7 +5,7 @@ package_manager = "yarn"
 resolution = true
 skip-lint = false
 
-[programs.localnet]
+[programs.devnet]
 dao_vote = "6f5HD6HfhDScH56N59mcGeDa44vCwdQF65JyZS668pJf"
 notebox = "2gkh4PKHmENrdnjNmb515KVbvpdWGsvbDtQ4qzC2FqrV"
 
@@ -13,7 +13,7 @@ notebox = "2gkh4PKHmENrdnjNmb515KVbvpdWGsvbDtQ4qzC2FqrV"
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+cluster = "devnet"
 wallet = "~/.config/solana/id.json"
 
 [workspace]
